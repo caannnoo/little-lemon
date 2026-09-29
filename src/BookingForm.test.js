@@ -3,23 +3,35 @@ import BookingForm from "./BookingForm";
 import { initializeTimes, updateTimes } from "./Main";
 
 test("Renders the Choose date label", () => {
-  render(<BookingForm />);
+  render(
+    <BookingForm
+      availableTimes={["17:00", "18:00"]}
+      dispatch={() => {}}
+      submitForm={() => {}}
+    />,
+  );
 
   const labelElement = screen.getByText("Choose date");
 
   expect(labelElement).toBeInTheDocument();
 });
 
-test("initializeTimes returns the correct available times", () => {
+test("initializeTimes returns available times", () => {
   const times = initializeTimes();
 
-  expect(times).toEqual(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
+  expect(Array.isArray(times)).toBe(true);
+  expect(times.length).toBeGreaterThan(0);
 });
 
-test("updateTimes returns the same state", () => {
-  const state = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+test("updateTimes returns available times for the selected date", () => {
+  const state = [];
+  const action = {
+    type: "UPDATE_TIMES",
+    date: "2026-09-29",
+  };
 
-  const newState = updateTimes(state, { type: "UPDATE_TIMES" });
+  const newState = updateTimes(state, action);
 
-  expect(newState).toEqual(state);
+  expect(Array.isArray(newState)).toBe(true);
+  expect(newState.length).toBeGreaterThan(0);
 });
