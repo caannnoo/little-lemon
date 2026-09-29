@@ -201,3 +201,138 @@ nav a {
 
   margin-top: auto;
 }
+
+/* ===== FOOTER ===== */
+
+footer {
+  background-color: #495e57;
+  color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 40px;
+
+  padding: 60px max(20px, calc((100% - 900px) / 2));
+}
+
+footer img {
+  width: 140px;
+}
+
+footer h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+footer ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  font-family: "Karla", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f4ce14;
+}
+
+footer p {
+  font-family: "Karla", sans-serif;
+  margin: 0 0 10px;
+}
+
+/* ===== BOOKING PAGE ===== */
+
+.booking-page {
+  background-color: #edefee;
+  min-height: 70vh;
+  padding: 60px 20px;
+}
+
+.booking-page h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #495e57;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.booking-page form {
+  background-color: #ffffff;
+  max-width: 450px !important;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.booking-page label {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.booking-page input,
+.booking-page select {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #495e57;
+  border-radius: 8px;
+}
+
+.booking-page input[type="submit"] {
+  background-color: #f4ce14;
+  color: #333333;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+
+.booking-page input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== CONFIRMED BOOKING ===== */
+
+.confirmed-booking {
+  background-color: #edefee;
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.confirmed-booking h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #495e57;
+  margin: 0 0 15px;
+}
+
+.confirmed-booking p {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  color: #333333;
+  margin: 0;
+}

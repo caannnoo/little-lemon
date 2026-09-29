@@ -10,7 +10,7 @@ function Hero() {
           recipes served with a modern twist.
         </p>
 
-        <button>Reserve a Table</button>
+        <button aria-label="On Click">Reserve a Table</button>
       </div>
 
       <img

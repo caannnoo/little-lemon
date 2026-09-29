@@ -2,10 +2,10 @@ function Footer() {
   return (
     <footer>
       <div>
-        <img src="/logo.png" alt="Little Lemon logo" />
+        <img src="/Logo.svg" alt="Little Lemon logo" />
       </div>
 
-      <div>
+      <nav aria-label="Footer navigation">
         <h3>Doormat Navigation</h3>
         <ul>
           <li>
@@ -27,7 +27,7 @@ function Footer() {
             <a href="/login">Login</a>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <div>
         <h3>Contact</h3>
